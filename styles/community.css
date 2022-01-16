@@ -1,0 +1,132 @@
+.community {
+    flex: 1 1 auto;
+    align-self: stretch;
+    width: 100%;
+}
+
+.community__h2 {
+    margin-bottom: 20px;
+}
+
+.community__articles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.article {
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--menu-color);
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.article_hot {
+    box-shadow: 0 0 15px red;
+
+}
+
+
+.article__title {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--link-color);
+}
+
+.article_hot .article__title:before {
+    margin-right: 0.5em;
+    content: "";
+    display: inline-block;
+    background: url("./../assets/fire.svg") no-repeat center center;
+    width: 1em;
+    height: 1em;
+    background-size: 100% 100%;
+    animation: pulse 2.5s linear infinite;
+}
+
+
+.article__title:hover {
+    cursor: pointer;
+    color: var(--link-color-hover);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}
+
+ul.article__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 0.6em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.article__tag {
+    padding: 2px 5px;
+    border-radius: 8px;
+    border: 1px solid currentColor;
+    transition: all ease .3s;
+}
+
+.article__tag:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px currentColor;
+}
+
+.article__tag_red {
+    color: red;
+}
+
+.article__tag_purple{
+    color: purple;
+}
+
+.article__tag_blue{
+    color: skyblue;
+}
+
+.article__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.paginator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.paginator__item {
+    padding: 10px;
+    line-height: 1em;
+    border: 1px solid white;
+    transition: all 0.2s ease;
+}
+
+.paginator__item:hover {
+    cursor: pointer;
+    background: var(--link-color-hover);
+}
+
+.paginator__item_active {
+    color: yellow;
+    border: yellow 1px solid;
+}

@@ -1,0 +1,40 @@
+
+
+.monsters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 30px;
+}
+
+.monster {
+    background: rgba(0, 0, 0, 0.77);
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.monster:hover {
+    transform: scale(1.05);
+}
+
+
+.monster .monster__image {
+    display: flex;
+    height: 70%;
+}
+
+.monster img {
+    display: block;
+    max-height: 100%;
+}
+
+.monster h3 {
+    margin: 0;
+}

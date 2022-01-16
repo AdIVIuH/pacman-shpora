@@ -1,0 +1,174 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+    /*h1,*/
+    /*h2,*/
+    /*h3,*/
+    /*h4,*/
+    /*p,*/
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    src: url("./fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    src: url("./fonts/Montserrat-Bold.ttf");
+}
+
+:root {
+    --shadow-color: #ea9101;
+    --background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1614270608_1-p-chernii-pikselnii-fon-1.jpg');
+    --background-color: rgba(0, 0, 0, 0.60);
+    --menu-color: rgb(0, 0, 50);
+    --submenu-color: rgb(89, 87, 87);
+    --content-background-color: rgb(0, 0, 0);
+    --text-color-hover: #ea9101;
+    --text-color: #e6ddcd;
+    --link-color: #ef9f10;
+    --link-color-hover: #966204;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*overflow: hidden;*/
+    min-width: 360px;
+    max-width: 100vw;
+    /*background-image: var(--background-image);*/
+    /*background-color: var(--background-color);*/
+    /*background-blend-mode: overlay, color;*/
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 15px;
+}
+
+article h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+article section h2 {
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+article section h2::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: -10px;
+    display: block;
+}
+
+article p {
+    font-size: 20px;
+}
+
+.description {
+    margin-bottom: 50px;
+}
+
+article section {
+    margin-bottom: 30px;
+}
+
+/*.title {*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 40px;*/
+/*}*/
+
+.main {
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px 10px rgb(0, 0, 40);
+    background: var(--menu-color);
+    border-radius: 30px;
+    padding: 30px;
+    margin: 30px auto 50px;
+    width: 100%;
+    max-width: 80vw;
+}
+
